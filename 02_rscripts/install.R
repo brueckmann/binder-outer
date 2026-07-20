@@ -2,6 +2,7 @@
 packs <- c(
   "dataverse",
   "causaldata",
+  "tidyverse",
   "data.table",
   "estimatr",
   "evaluate",
@@ -12,7 +13,6 @@ packs <- c(
   "modelsummary",
   "openssl",
   "ragg",
-  "stringr",
   "this.path",
   "tinytable",
   "xfun"
