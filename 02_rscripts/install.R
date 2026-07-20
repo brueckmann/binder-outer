@@ -1,22 +1,23 @@
 ### install packages
 packs <- c(
-  'dataverse',
-  'causaldata',
-  'data.table',
-  'estimatr',
-  'evaluate',
-  'fixest',
-  'ggplot2',
-  'haven',
-  'magrittr',
-  'modelsummary',
-  'openssl',
-  'ragg',
-  'softbib',
-  'stringr',
-  'this.path',
-  'tinytable',
-  'xfun'
+  "dataverse",
+  "causaldata",
+  "data.table",
+  "estimatr",
+  "evaluate",
+  "fixest",
+  "ggplot2",
+  "haven",
+  "magrittr",
+  "modelsummary",
+  "openssl",
+  "ragg",
+  "softbib",
+  "stringr",
+  "this.path",
+  "tinytable",
+  "xfun",
+  "grateful"
 )
 
 options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2026-07-17"))
