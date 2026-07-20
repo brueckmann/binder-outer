@@ -9,3 +9,5 @@ source("02_rscripts/01_data_cleaning.R")
 source("02_rscripts/02_descriptives.R")
 source("02_rscripts/03_modeling.R")
 source("02_rscripts/98_sessioninfo_and_cite.R")
+
+quarto::quarto_render("03_output/Comparison.qmd", quiet = TRUE)
