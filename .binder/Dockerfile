@@ -1,5 +1,12 @@
-FROM rocker/binder:4.5.2
+FROM rocker/r-ver:4.6.1
 LABEL maintainer='brueckmann'
+
+# Provide defaults for binder variables to avoid build-time warnings
+ARG NB_USER=rstudio
+ARG NB_GID=1000
+ENV NB_USER=${NB_USER}
+ENV NB_GID=${NB_GID}
+ENV HOME=/home/${NB_USER}
 
 USER root
 
@@ -24,13 +31,5 @@ RUN apt-get update -y && \
 COPY --chown=${NB_USER}:${NB_GID} . ${HOME}/project
 WORKDIR ${HOME}/project
 
-# Ensure run.sh is executable
-RUN chmod +x ${HOME}/project/run.sh && \
-    chmod -R u+rwX ${HOME}/project
-
 # Switch to non-root binder user
 USER ${NB_USER}
-
-# Ensure R can access network for data download - binder images allow network by default.
-# Run the pipeline as the non-root user
-CMD ["bash", "run.sh"]
