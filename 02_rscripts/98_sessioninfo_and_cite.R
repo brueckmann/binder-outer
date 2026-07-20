@@ -8,11 +8,8 @@ setwd(project_root)
 cat("Project root set to:", getwd(), "\n")
 
 
-### For citing used R Packages
-# https://github.com/vincentarelbundock/softbib 
-softbib::softbib(output = "software.bib")
-# save report to working directory
-# grateful::cite_packages(out.dir = ".")            
-
 #### Session Info 
 writeLines(capture.output(sessionInfo()),("session_info.txt"))
+
+      
+
