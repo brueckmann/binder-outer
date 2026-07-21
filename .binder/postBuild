@@ -1,6 +1,5 @@
 #!/bin/bash
-jupyter serverextension enable --py nbgitpuller --sys-prefix
-
+jupyter server extension enable --sys-prefix nbgitpuller
 set -e
 
 echo "Running Binder postBuild: installing R packages..."
