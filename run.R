@@ -3,8 +3,6 @@
 # this works also when you are using binder's RStudio
 # https://mybinder.org/v2/gh/brueckmann/did-binder-test/HEAD?urlpath=rstudio
 
-cat("Script directory:", current_script_dir, "\n")
-
 cat("==========================================")
 cat("Starting Analysis Pipeline")
 cat("==========================================")
