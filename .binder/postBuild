@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+echo "Running Binder postBuild: installing R packages..."
+
+# Prefer installing from the 02_rscripts folder (this script pins CRAN snapshot)
+if command -v Rscript >/dev/null 2>&1; then
+  Rscript 02_rscripts/install.R || { echo "R package installation failed"; exit 1; }
+else
+  echo "Rscript not found in PATH. Ensure the Binder/runtime image provides R." >&2
+  exit 1
+fi
+
+echo "postBuild finished."
