@@ -59,12 +59,13 @@ Below is an overview of the repository layout:
 ├── 03_output/                  # Output figures, tables and Quarto and HTML outpus
 │   ├── figures/                    # To store figures generated from R Code
 │   ├── tables/                     # To store tables generated from R Code
-│   ├── BasicDiffinDiffs.qmd        # Basic diff-in-diffs presentation
+│   ├── Basic_diff_in_diffs.qmd     # Basic diff-in-diffs presentation
 │   ├── Comparison.qmd              # Comparison analysis document
 │   ├── references.yaml             # Bibliography references
 │   └── README.md                   # Output documentation
 ├── diff_in_diffs.Rproj         # The RStudio R project
 ├── github_info.qmd             # Explains the very basics of Git and Github usage
+├── .gitignore                  # Specifies what git should ignore
 ├── run.R                       # R script to run everything
 ├── run.sh                      # Shell script to run everything
 └── session_info.txt            # Information on the R session

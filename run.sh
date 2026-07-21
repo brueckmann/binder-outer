@@ -177,12 +177,12 @@ else
 fi
 echo ""
 
-quarto render "03_output/BasicDiffinDiffs.qmd" --quiet
+quarto render "03_output/Basic_diff_in_diffs.qmd" --quiet
 
 if [ $? -eq 0 ]; then
-    echo "✓ Quarto rendered BasicDiffinDiffs presentation successfully"
+    echo "✓ Quarto rendered Basic_diff_in_diffs presentation successfully"
 else
-    echo "✗ Quarto rendering BasicDiffinDiffs failed"
+    echo "✗ Quarto rendering Basic_diff_in_diffs failed"
     exit 1
 fi
 echo ""
