@@ -126,8 +126,8 @@ echo ""
 
 # Run session info generating code
 echo "Step 4: Running session info generating code..."
-echo "Executing: 98_sessioninfo_and_cite.R"
-"$RSCRIPT" "$SCRIPT_DIR/98_sessioninfo_and_cite.R"
+echo "Executing: 98_write_sessioninfo.R.R"
+"$RSCRIPT" "$SCRIPT_DIR/98_write_sessioninfo.R.R"
 if [ $? -eq 0 ]; then
     echo "✓ Make session info completed successfully"
 else
