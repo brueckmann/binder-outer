@@ -11,4 +11,18 @@ else
   exit 1
 fi
 
+
+
+QUARTO_VERSION="1.9.38"
+QUARTO_TARBALL="quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
+
+echo "Installing Quarto ${QUARTO_VERSION}..."
+curl -LO "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/${QUARTO_TARBALL}"
+mkdir -p "${HOME}/opt/quarto"
+tar -xzf "${QUARTO_TARBALL}" -C "${HOME}/opt/quarto" --strip-components=1
+rm "${QUARTO_TARBALL}"
+
+mkdir -p "${HOME}/.local/bin"
+ln -sf "${HOME}/opt/quarto/bin/quarto" "${HOME}/.local/bin/quarto"
+
 echo "postBuild finished."
