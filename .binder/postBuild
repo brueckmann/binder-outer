@@ -1,4 +1,18 @@
 #!/bin/bash
+set -euo pipefail
+
+# Ensure nbgitpuller is installed
+pip install --no-cache nbgitpuller
+
+# Clone the content repository (updatepresentationandcode branch)
+nbgitpuller clone \
+  --depth 1 \
+  --branch updatepresentationandcode \
+  https://github.com/brueckmann/diff-in-diffs \
+  "${HOME}/diff-in-diffs"
+
+echo "Content repository cloned successfully!"
+
 set -e
 
 echo "Running Binder postBuild: installing R packages..."
