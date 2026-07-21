@@ -2,7 +2,7 @@
 
 # when you are using https://hub.2i2c.mybinder.org/user/brueckmann-did-binder-test-6htfzh5r/rstudio/
 
-# source("install.R") # now with the post-build this should not be necessary anymore! 
+source("02_rscripts/install.R") 
 
 source("02_rscripts/00_get_data.R")
 source("02_rscripts/01_data_cleaning.R")
